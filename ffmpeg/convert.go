@@ -34,6 +34,10 @@ func settingsToFlags(video map[string]string, audio map[string]string) []string 
 }
 
 func Convert(source string, destination string, video map[string]string, audio map[string]string) string {
+	fmt.Println("Video:")
+	fmt.Println(video)
+	fmt.Println("Audio:")
+	fmt.Println(audio)
 	flags := settingsToFlags(video, audio)
 	args := make([]string, 0)
 	args = append(args, "-i", source, "-threads", "0", "-n")
